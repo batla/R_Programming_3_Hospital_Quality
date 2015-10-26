@@ -8,8 +8,6 @@ best <- function(state, outcome) {
   # specify data directory from current working directory
   # requires internet connection
   
-  library(dplyr)
-  
   #if(!file.exists("./data")){dir.create("./data")}
   #fileUrl <- 
    # "https://d396qusza40orc.cloudfront.net/rprog%2Fdata%2FProgAssignment3-data.zip"
@@ -89,9 +87,9 @@ best <- function(state, outcome) {
   ## in alpha order if more than one share the lowest rate
   if (length(bestHospitals) > 1 ) {
     bestHospitalsSorted <- sort(bestHospitals)
-    toupper(bestHospitalsSorted[1])
+    bestHospitalsSorted[1]
   }
   else {
-    toupper(bestHospitals)
+    bestHospitals
   }
 }
